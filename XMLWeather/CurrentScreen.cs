@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace XMLWeather
 {
@@ -14,6 +15,11 @@ namespace XMLWeather
         int counter = 0;
 
         int weatherCode;
+
+        string condition = Form1.days[0].condition;
+
+        // Creates a TextInfo based on the "en-US" culture. used to capitalize strings
+        TextInfo myTI = new CultureInfo("en-US", false).TextInfo;
 
         public CurrentScreen()
         {
@@ -29,6 +35,9 @@ namespace XMLWeather
             minOutput.Text = $"{Form1.days[0].tempLow}° C";
             maxOutput.Text = $"{Form1.days[0].tempHigh}° C";
             humidityOutput.Text = $"{Form1.days[0].humidity} %";
+
+            //change condition capitalization and display
+            conditionOutput.Text = $"{myTI.ToTitleCase(condition)}";
 
             //grab current weather code
             weatherCode = Convert.ToInt32(Form1.days[0].weatherCode);

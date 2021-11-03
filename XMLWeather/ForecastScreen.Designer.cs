@@ -49,7 +49,7 @@
             this.forecastLabel.AutoSize = true;
             this.forecastLabel.BackColor = System.Drawing.Color.Transparent;
             this.forecastLabel.Font = new System.Drawing.Font("Futurama Bold Font", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forecastLabel.ForeColor = System.Drawing.Color.White;
+            this.forecastLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(228)))), ((int)(((byte)(118)))));
             this.forecastLabel.Location = new System.Drawing.Point(130, 350);
             this.forecastLabel.Name = "forecastLabel";
             this.forecastLabel.Size = new System.Drawing.Size(104, 33);
@@ -61,8 +61,8 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Futurama Bold Font", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(30, 350);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
+            this.label3.Location = new System.Drawing.Point(14, 350);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(111, 33);
             this.label3.TabIndex = 61;
@@ -110,10 +110,10 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(228)))), ((int)(((byte)(118)))));
             this.label5.Location = new System.Drawing.Point(120, 360);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 27);
+            this.label5.Size = new System.Drawing.Size(126, 27);
             this.label5.TabIndex = 63;
             this.label5.Text = "____________________________";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
