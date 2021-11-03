@@ -38,13 +38,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.designLabel1 = new System.Windows.Forms.Label();
             this.mainWeatherIcon = new System.Windows.Forms.PictureBox();
-            this.dateOutput = new System.Windows.Forms.Label();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.maxLabel = new System.Windows.Forms.Label();
             this.maxOutput = new System.Windows.Forms.Label();
             this.minOutput = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.dateOutput = new System.Windows.Forms.Label();
+            this.timeOutput = new System.Windows.Forms.Label();
+            this.cityInput = new System.Windows.Forms.TextBox();
+            this.countryInput = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mainWeatherIcon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,9 +69,9 @@
             // 
             this.minLabel.Font = new System.Drawing.Font("Futurama Bold Font", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
-            this.minLabel.Location = new System.Drawing.Point(22, 260);
+            this.minLabel.Location = new System.Drawing.Point(0, 260);
             this.minLabel.Name = "minLabel";
-            this.minLabel.Size = new System.Drawing.Size(60, 16);
+            this.minLabel.Size = new System.Drawing.Size(82, 16);
             this.minLabel.TabIndex = 29;
             this.minLabel.Text = "Low of:";
             this.minLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -145,18 +151,6 @@
             this.mainWeatherIcon.TabIndex = 44;
             this.mainWeatherIcon.TabStop = false;
             // 
-            // dateOutput
-            // 
-            this.dateOutput.BackColor = System.Drawing.Color.Transparent;
-            this.dateOutput.Font = new System.Drawing.Font("Futurama Bold Font", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
-            this.dateOutput.Location = new System.Drawing.Point(0, 190);
-            this.dateOutput.Name = "dateOutput";
-            this.dateOutput.Size = new System.Drawing.Size(250, 27);
-            this.dateOutput.TabIndex = 45;
-            this.dateOutput.Text = "Date";
-            this.dateOutput.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // timer
             // 
             this.timer.Enabled = true;
@@ -167,9 +161,9 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
-            this.label1.Location = new System.Drawing.Point(15, 236);
+            this.label1.Location = new System.Drawing.Point(3, 236);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 27);
+            this.label1.Size = new System.Drawing.Size(132, 27);
             this.label1.TabIndex = 46;
             this.label1.Text = "____________________________";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -178,9 +172,9 @@
             // 
             this.maxLabel.Font = new System.Drawing.Font("Futurama Bold Font", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
-            this.maxLabel.Location = new System.Drawing.Point(12, 240);
+            this.maxLabel.Location = new System.Drawing.Point(3, 240);
             this.maxLabel.Name = "maxLabel";
-            this.maxLabel.Size = new System.Drawing.Size(70, 18);
+            this.maxLabel.Size = new System.Drawing.Size(79, 18);
             this.maxLabel.TabIndex = 47;
             this.maxLabel.Text = "High of:";
             this.maxLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -216,16 +210,91 @@
             this.label2.Text = "____________________________";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // dateOutput
+            // 
+            this.dateOutput.BackColor = System.Drawing.Color.Transparent;
+            this.dateOutput.Font = new System.Drawing.Font("Futurama Bold Font", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
+            this.dateOutput.Location = new System.Drawing.Point(136, 190);
+            this.dateOutput.Name = "dateOutput";
+            this.dateOutput.Size = new System.Drawing.Size(104, 27);
+            this.dateOutput.TabIndex = 45;
+            this.dateOutput.Text = "Date";
+            this.dateOutput.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timeOutput
+            // 
+            this.timeOutput.BackColor = System.Drawing.Color.Transparent;
+            this.timeOutput.Font = new System.Drawing.Font("Futurama Bold Font", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
+            this.timeOutput.Location = new System.Drawing.Point(7, 190);
+            this.timeOutput.Name = "timeOutput";
+            this.timeOutput.Size = new System.Drawing.Size(153, 27);
+            this.timeOutput.TabIndex = 51;
+            this.timeOutput.Text = "Date";
+            this.timeOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cityInput
+            // 
+            this.cityInput.Location = new System.Drawing.Point(147, 3);
+            this.cityInput.Name = "cityInput";
+            this.cityInput.Size = new System.Drawing.Size(100, 20);
+            this.cityInput.TabIndex = 52;
+            // 
+            // countryInput
+            // 
+            this.countryInput.Location = new System.Drawing.Point(147, 29);
+            this.countryInput.Name = "countryInput";
+            this.countryInput.Size = new System.Drawing.Size(100, 20);
+            this.countryInput.TabIndex = 53;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Futurama Title Font", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(25, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(121, 20);
+            this.label4.TabIndex = 54;
+            this.label4.Text = "City";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Futurama Title Font", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(25, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(121, 20);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Country:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Futurama Title Font", 12F);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
+            this.label7.Location = new System.Drawing.Point(3, 4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 37);
+            this.label7.TabIndex = 56;
+            this.label7.Text = "City Search";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(228)))), ((int)(((byte)(118)))));
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.countryInput);
+            this.Controls.Add(this.cityInput);
+            this.Controls.Add(this.dateOutput);
+            this.Controls.Add(this.timeOutput);
             this.Controls.Add(this.mainWeatherIcon);
             this.Controls.Add(this.minOutput);
             this.Controls.Add(this.maxOutput);
             this.Controls.Add(this.maxLabel);
-            this.Controls.Add(this.dateOutput);
             this.Controls.Add(this.tempLabel);
             this.Controls.Add(this.forecastLabel);
             this.Controls.Add(this.label3);
@@ -254,12 +323,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label designLabel1;
         private System.Windows.Forms.PictureBox mainWeatherIcon;
-        private System.Windows.Forms.Label dateOutput;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label maxLabel;
         private System.Windows.Forms.Label maxOutput;
         private System.Windows.Forms.Label minOutput;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label dateOutput;
+        private System.Windows.Forms.Label timeOutput;
+        private System.Windows.Forms.TextBox cityInput;
+        private System.Windows.Forms.TextBox countryInput;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
     }
 }

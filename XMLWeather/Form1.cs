@@ -34,7 +34,7 @@ namespace XMLWeather
 
         private void ExtractForecast()
         {
-            XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "," + country + "&mode=xml&units=metric&cnt=7&appid=f27cf44af098706a7dfe0801cf6a87ec");
+            XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "," + country + "&mode=xml&units=metric&cnt=7&appid=3f2e224b815c0ed45524322e145149f0");
 
             while (reader.Read())
             {
@@ -58,7 +58,7 @@ namespace XMLWeather
         private void ExtractCurrent()
         {
             // current info is not included in forecast file so we need to use this file to get it
-            XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&mode=xml&units=metric&appid=f27cf44af098706a7dfe0801cf6a87ec");
+            XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0");
 
             //find the city and country and add to appropriate item in days list
             reader.ReadToFollowing("city");

@@ -39,8 +39,8 @@ namespace XMLWeather
         {
             counter++;
 
-            dateOutput.Text = DateTime.Now.ToString("hh:mm:ss");
-            dateOutput.Text += "|" + DateTime.Now.ToString("dd-MM-yy");
+            dateOutput.Text = DateTime.Now.ToString("dd-MM-yy");
+            timeOutput.Text = DateTime.Now.ToString("hh:mm:ss");
 
             if (counter == 100)
             {
