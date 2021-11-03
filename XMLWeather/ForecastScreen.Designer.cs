@@ -48,11 +48,11 @@
             // 
             this.forecastLabel.AutoSize = true;
             this.forecastLabel.BackColor = System.Drawing.Color.Transparent;
-            this.forecastLabel.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forecastLabel.Font = new System.Drawing.Font("Futurama Bold Font", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forecastLabel.ForeColor = System.Drawing.Color.White;
             this.forecastLabel.Location = new System.Drawing.Point(130, 350);
             this.forecastLabel.Name = "forecastLabel";
-            this.forecastLabel.Size = new System.Drawing.Size(85, 30);
+            this.forecastLabel.Size = new System.Drawing.Size(104, 33);
             this.forecastLabel.TabIndex = 62;
             this.forecastLabel.Text = "7 Day";
             // 
@@ -60,11 +60,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Futurama Bold Font", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(30, 350);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 30);
+            this.label3.Size = new System.Drawing.Size(111, 33);
             this.label3.TabIndex = 61;
             this.label3.Text = "Today";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -80,10 +80,11 @@
             // minLabel
             // 
             this.minLabel.AutoSize = true;
+            this.minLabel.Font = new System.Drawing.Font("Futurama Bold Font", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minLabel.ForeColor = System.Drawing.Color.White;
             this.minLabel.Location = new System.Drawing.Point(60, 166);
             this.minLabel.Name = "minLabel";
-            this.minLabel.Size = new System.Drawing.Size(90, 13);
+            this.minLabel.Size = new System.Drawing.Size(112, 14);
             this.minLabel.TabIndex = 46;
             this.minLabel.Text = " Min Temperature";
             // 
@@ -98,10 +99,11 @@
             // maxLabel
             // 
             this.maxLabel.AutoSize = true;
+            this.maxLabel.Font = new System.Drawing.Font("Futurama Bold Font", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxLabel.ForeColor = System.Drawing.Color.White;
             this.maxLabel.Location = new System.Drawing.Point(60, 136);
             this.maxLabel.Name = "maxLabel";
-            this.maxLabel.Size = new System.Drawing.Size(90, 13);
+            this.maxLabel.Size = new System.Drawing.Size(112, 14);
             this.maxLabel.TabIndex = 44;
             this.maxLabel.Text = "Max Temperature";
             // 
@@ -119,20 +121,22 @@
             // date1
             // 
             this.date1.AutoSize = true;
+            this.date1.Font = new System.Drawing.Font("Futurama Bold Font", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date1.ForeColor = System.Drawing.Color.White;
             this.date1.Location = new System.Drawing.Point(60, 110);
             this.date1.Name = "date1";
-            this.date1.Size = new System.Drawing.Size(30, 13);
+            this.date1.Size = new System.Drawing.Size(36, 14);
             this.date1.TabIndex = 64;
             this.date1.Text = "Date";
             // 
             // date2
             // 
             this.date2.AutoSize = true;
+            this.date2.Font = new System.Drawing.Font("Futurama Bold Font", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.date2.ForeColor = System.Drawing.Color.White;
             this.date2.Location = new System.Drawing.Point(60, 194);
             this.date2.Name = "date2";
-            this.date2.Size = new System.Drawing.Size(30, 13);
+            this.date2.Size = new System.Drawing.Size(36, 14);
             this.date2.TabIndex = 69;
             this.date2.Text = "Date";
             // 
@@ -147,10 +151,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Futurama Bold Font", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(60, 250);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.Size = new System.Drawing.Size(112, 14);
             this.label4.TabIndex = 67;
             this.label4.Text = " Min Temperature";
             // 
@@ -165,27 +170,29 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Futurama Bold Font", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(60, 220);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 13);
+            this.label7.Size = new System.Drawing.Size(112, 14);
             this.label7.TabIndex = 65;
             this.label7.Text = "Max Temperature";
             // 
             // randoutput
             // 
             this.randoutput.AutoSize = true;
+            this.randoutput.Font = new System.Drawing.Font("Futurama Bold Font", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.randoutput.ForeColor = System.Drawing.Color.White;
             this.randoutput.Location = new System.Drawing.Point(70, 308);
             this.randoutput.Name = "randoutput";
-            this.randoutput.Size = new System.Drawing.Size(30, 13);
+            this.randoutput.Size = new System.Drawing.Size(36, 14);
             this.randoutput.TabIndex = 70;
             this.randoutput.Text = "Date";
             // 
             // ForecastScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
             this.Controls.Add(this.randoutput);
             this.Controls.Add(this.date2);
