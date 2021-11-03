@@ -8,13 +8,13 @@ namespace XMLWeather
     public class Day
     {
         public string date, currentTemp, currentTime, condition, location, tempHigh, tempLow, unit,
-            windSpeed, windDirection, precipitation, visibility, weatherCode, lastUpdate, country;
+            windSpeed, windDirection, precipitation, visibility, weatherCode, lastUpdate, country, humidity;
 
         public Day()
         {
             date = currentTemp = currentTime = condition = location = tempHigh = tempLow
                 = unit = windSpeed = windDirection = precipitation = visibility = weatherCode 
-                = lastUpdate = country = "";
+                = lastUpdate = country = humidity = "";
         }
     }
 }

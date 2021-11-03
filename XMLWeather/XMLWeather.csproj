@@ -120,6 +120,9 @@
   <ItemGroup>
     <None Include="Resources\sun behind cloud.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\91-912588_cartoon-cloud-clip-art-snow-cloud-clipart.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -37,7 +37,6 @@
             this.forecastLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.designLabel1 = new System.Windows.Forms.Label();
-            this.mainWeatherIcon = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.maxLabel = new System.Windows.Forms.Label();
@@ -48,16 +47,20 @@
             this.timeOutput = new System.Windows.Forms.Label();
             this.cityInput = new System.Windows.Forms.TextBox();
             this.countryInput = new System.Windows.Forms.TextBox();
+            this.cityLabel = new System.Windows.Forms.Label();
+            this.countryLabel = new System.Windows.Forms.Label();
+            this.searchLabel = new System.Windows.Forms.Label();
+            this.mainWeatherIcon = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.humidityOutput = new System.Windows.Forms.Label();
+            this.errorLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mainWeatherIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // cityOutput
             // 
             this.cityOutput.BackColor = System.Drawing.Color.Transparent;
-            this.cityOutput.Font = new System.Drawing.Font("Futurama Bold Font", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityOutput.Font = new System.Drawing.Font("Futurama Bold Font", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cityOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
             this.cityOutput.Location = new System.Drawing.Point(5, 142);
             this.cityOutput.Name = "cityOutput";
@@ -69,9 +72,9 @@
             // 
             this.minLabel.Font = new System.Drawing.Font("Futurama Bold Font", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
-            this.minLabel.Location = new System.Drawing.Point(0, 260);
+            this.minLabel.Location = new System.Drawing.Point(54, 255);
             this.minLabel.Name = "minLabel";
-            this.minLabel.Size = new System.Drawing.Size(82, 16);
+            this.minLabel.Size = new System.Drawing.Size(82, 26);
             this.minLabel.TabIndex = 29;
             this.minLabel.Text = "Low of:";
             this.minLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -142,15 +145,6 @@
             this.designLabel1.Text = "____________________________";
             this.designLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // mainWeatherIcon
-            // 
-            this.mainWeatherIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.mainWeatherIcon.Location = new System.Drawing.Point(166, 63);
-            this.mainWeatherIcon.Name = "mainWeatherIcon";
-            this.mainWeatherIcon.Size = new System.Drawing.Size(60, 60);
-            this.mainWeatherIcon.TabIndex = 44;
-            this.mainWeatherIcon.TabStop = false;
-            // 
             // timer
             // 
             this.timer.Enabled = true;
@@ -161,7 +155,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
-            this.label1.Location = new System.Drawing.Point(3, 236);
+            this.label1.Location = new System.Drawing.Point(57, 231);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 27);
             this.label1.TabIndex = 46;
@@ -172,9 +166,9 @@
             // 
             this.maxLabel.Font = new System.Drawing.Font("Futurama Bold Font", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
-            this.maxLabel.Location = new System.Drawing.Point(3, 240);
+            this.maxLabel.Location = new System.Drawing.Point(58, 233);
             this.maxLabel.Name = "maxLabel";
-            this.maxLabel.Size = new System.Drawing.Size(79, 18);
+            this.maxLabel.Size = new System.Drawing.Size(79, 20);
             this.maxLabel.TabIndex = 47;
             this.maxLabel.Text = "High of:";
             this.maxLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -183,7 +177,7 @@
             // 
             this.maxOutput.Font = new System.Drawing.Font("Futurama Bold Font", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.maxOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
-            this.maxOutput.Location = new System.Drawing.Point(76, 240);
+            this.maxOutput.Location = new System.Drawing.Point(130, 233);
             this.maxOutput.Name = "maxOutput";
             this.maxOutput.Size = new System.Drawing.Size(70, 18);
             this.maxOutput.TabIndex = 48;
@@ -193,7 +187,7 @@
             // 
             this.minOutput.Font = new System.Drawing.Font("Futurama Bold Font", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.minOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
-            this.minOutput.Location = new System.Drawing.Point(76, 260);
+            this.minOutput.Location = new System.Drawing.Point(130, 255);
             this.minOutput.Name = "minOutput";
             this.minOutput.Size = new System.Drawing.Size(70, 18);
             this.minOutput.TabIndex = 49;
@@ -248,45 +242,90 @@
             this.countryInput.Size = new System.Drawing.Size(100, 20);
             this.countryInput.TabIndex = 53;
             // 
+            // cityLabel
+            // 
+            this.cityLabel.Font = new System.Drawing.Font("Futurama Title Font", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cityLabel.Location = new System.Drawing.Point(99, 4);
+            this.cityLabel.Name = "cityLabel";
+            this.cityLabel.Size = new System.Drawing.Size(47, 20);
+            this.cityLabel.TabIndex = 54;
+            this.cityLabel.Text = "City";
+            this.cityLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // countryLabel
+            // 
+            this.countryLabel.Font = new System.Drawing.Font("Futurama Title Font", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countryLabel.Location = new System.Drawing.Point(71, 29);
+            this.countryLabel.Name = "countryLabel";
+            this.countryLabel.Size = new System.Drawing.Size(75, 20);
+            this.countryLabel.TabIndex = 55;
+            this.countryLabel.Text = "Country:";
+            this.countryLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // searchLabel
+            // 
+            this.searchLabel.Font = new System.Drawing.Font("Futurama Title Font", 12F);
+            this.searchLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
+            this.searchLabel.Location = new System.Drawing.Point(3, 4);
+            this.searchLabel.Name = "searchLabel";
+            this.searchLabel.Size = new System.Drawing.Size(90, 37);
+            this.searchLabel.TabIndex = 56;
+            this.searchLabel.Text = "Click to Search";
+            this.searchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.searchLabel.Click += new System.EventHandler(this.searchLabel_Click);
+            // 
+            // mainWeatherIcon
+            // 
+            this.mainWeatherIcon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.mainWeatherIcon.Location = new System.Drawing.Point(160, 59);
+            this.mainWeatherIcon.Name = "mainWeatherIcon";
+            this.mainWeatherIcon.Size = new System.Drawing.Size(80, 80);
+            this.mainWeatherIcon.TabIndex = 44;
+            this.mainWeatherIcon.TabStop = false;
+            // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Futurama Title Font", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(25, 4);
+            this.label4.Font = new System.Drawing.Font("Futurama Bold Font", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
+            this.label4.Location = new System.Drawing.Point(27, 281);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 20);
-            this.label4.TabIndex = 54;
-            this.label4.Text = "City";
+            this.label4.Size = new System.Drawing.Size(110, 26);
+            this.label4.TabIndex = 57;
+            this.label4.Text = "Humidity:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // label6
+            // humidityOutput
             // 
-            this.label6.Font = new System.Drawing.Font("Futurama Title Font", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(25, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(121, 20);
-            this.label6.TabIndex = 55;
-            this.label6.Text = "Country:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.humidityOutput.Font = new System.Drawing.Font("Futurama Bold Font", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.humidityOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
+            this.humidityOutput.Location = new System.Drawing.Point(131, 281);
+            this.humidityOutput.Name = "humidityOutput";
+            this.humidityOutput.Size = new System.Drawing.Size(70, 18);
+            this.humidityOutput.TabIndex = 58;
+            this.humidityOutput.Text = "humidity";
             // 
-            // label7
+            // errorLabel
             // 
-            this.label7.Font = new System.Drawing.Font("Futurama Title Font", 12F);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
-            this.label7.Location = new System.Drawing.Point(3, 4);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 37);
-            this.label7.TabIndex = 56;
-            this.label7.Text = "City Search";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.errorLabel.Font = new System.Drawing.Font("Futurama Bold Font", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorLabel.ForeColor = System.Drawing.Color.Red;
+            this.errorLabel.Location = new System.Drawing.Point(0, 299);
+            this.errorLabel.Name = "errorLabel";
+            this.errorLabel.Size = new System.Drawing.Size(250, 51);
+            this.errorLabel.TabIndex = 59;
+            this.errorLabel.Text = "CITY NOT FOUND";
+            this.errorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.errorLabel.Visible = false;
             // 
             // CurrentScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(228)))), ((int)(((byte)(118)))));
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.errorLabel);
+            this.Controls.Add(this.humidityOutput);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.countryLabel);
+            this.Controls.Add(this.cityLabel);
             this.Controls.Add(this.countryInput);
             this.Controls.Add(this.cityInput);
             this.Controls.Add(this.dateOutput);
@@ -305,6 +344,7 @@
             this.Controls.Add(this.designLabel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
+            this.Controls.Add(this.searchLabel);
             this.Name = "CurrentScreen";
             this.Size = new System.Drawing.Size(250, 400);
             ((System.ComponentModel.ISupportInitialize)(this.mainWeatherIcon)).EndInit();
@@ -333,8 +373,11 @@
         private System.Windows.Forms.Label timeOutput;
         private System.Windows.Forms.TextBox cityInput;
         private System.Windows.Forms.TextBox countryInput;
+        private System.Windows.Forms.Label cityLabel;
+        private System.Windows.Forms.Label countryLabel;
+        private System.Windows.Forms.Label searchLabel;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label humidityOutput;
+        private System.Windows.Forms.Label errorLabel;
     }
 }

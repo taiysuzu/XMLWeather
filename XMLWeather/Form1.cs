@@ -16,9 +16,9 @@ namespace XMLWeather
         //create list to hold day objects
         public static List<Day> days = new List<Day>();
 
-        string url;
-        string city = "Stratford";
-        string country = "CA";
+        //create strings to hold location info
+        public static string city = "Stratford";
+        public static string country = "CA";
 
         public Form1()
         {
@@ -34,6 +34,7 @@ namespace XMLWeather
 
         private void ExtractForecast()
         {
+            //http://api.openweathermap.org/data/2.5/forecast/daily?q=Stratford,CA&mode=xml&units=metric&cnt=7&appid=3f2e224b815c0ed45524322e145149f0
             XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/forecast/daily?q=" + city + "," + country + "&mode=xml&units=metric&cnt=7&appid=3f2e224b815c0ed45524322e145149f0");
 
             while (reader.Read())
@@ -43,6 +44,9 @@ namespace XMLWeather
                 //fill day object with required data
                 reader.ReadToFollowing("time");
                 day.date = reader.GetAttribute("day");
+
+                reader.ReadToFollowing("symbol");
+                day.weatherCode = reader.GetAttribute("number");
 
                 reader.ReadToFollowing("temperature");
                 day.tempLow = reader.GetAttribute("min");
@@ -55,11 +59,12 @@ namespace XMLWeather
             }
         }
 
-        private void ExtractCurrent()
+        public static void ExtractCurrent()
         {
             // current info is not included in forecast file so we need to use this file to get it
+            //http://api.openweathermap.org/data/2.5/weather?q=Stratford,CA&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0"
             XmlReader reader = XmlReader.Create("http://api.openweathermap.org/data/2.5/weather?q=" + city + "," + country + "&mode=xml&units=metric&appid=3f2e224b815c0ed45524322e145149f0");
-
+            
             //find the city and country and add to appropriate item in days list
             reader.ReadToFollowing("city");
             days[0].location = reader.GetAttribute("name");
@@ -72,6 +77,9 @@ namespace XMLWeather
             days[0].currentTemp = Math.Round(Convert.ToDouble(reader.GetAttribute("value"))).ToString();
             days[0].tempLow = Math.Round(Convert.ToDouble(reader.GetAttribute("min"))).ToString();
             days[0].tempHigh = Math.Round(Convert.ToDouble(reader.GetAttribute("max"))).ToString();
+
+            reader.ReadToFollowing("humidity");
+            days[0].humidity = reader.GetAttribute("value");
 
             //find weather code and condition
             reader.ReadToFollowing("weather");
