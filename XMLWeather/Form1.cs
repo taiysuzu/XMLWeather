@@ -47,12 +47,15 @@ namespace XMLWeather
 
                 reader.ReadToFollowing("symbol");
                 day.weatherCode = reader.GetAttribute("number");
+                day.precipitation = reader.GetAttribute("name");
 
                 reader.ReadToFollowing("temperature");
                 day.tempLow = reader.GetAttribute("min");
                 day.tempHigh = reader.GetAttribute("max");
                 day.unit = reader.GetAttribute("unit");
 
+                reader.ReadToFollowing("clouds");
+                day.condition = reader.GetAttribute("name");
 
                 //TODO: if day object not null add to the days list
                 days.Add(day);
