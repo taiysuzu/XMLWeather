@@ -13,7 +13,8 @@ namespace XMLWeather
     {
         int counter = 0;
 
-        int weatherCode = Convert.ToInt32(Form1.days[0].weatherCode);
+        int weatherCode;
+
         public CurrentScreen()
         {
             InitializeComponent();
@@ -28,6 +29,9 @@ namespace XMLWeather
             minOutput.Text = $"{Form1.days[0].tempLow}° C";
             maxOutput.Text = $"{Form1.days[0].tempHigh}° C";
             humidityOutput.Text = $"{Form1.days[0].humidity} %";
+
+            //grab current weather code
+            weatherCode = Convert.ToInt32(Form1.days[0].weatherCode);
 
             //pick correct weather icon based on weather code
             if (weatherCode == 800)
@@ -92,7 +96,7 @@ namespace XMLWeather
             }
 
             try
-            {
+            {   //if city is not found (error thrown), catch and return error message
                 Form1.ExtractCurrent();
                 errorLabel.Visible = false;
             }
@@ -101,6 +105,7 @@ namespace XMLWeather
                 errorLabel.Visible = true;
             }
 
+            //update screen
             DisplayCurrent();
         }
     }

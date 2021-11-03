@@ -225,7 +225,7 @@
             this.timeOutput.Name = "timeOutput";
             this.timeOutput.Size = new System.Drawing.Size(153, 27);
             this.timeOutput.TabIndex = 51;
-            this.timeOutput.Text = "Date";
+            this.timeOutput.Text = "Time";
             this.timeOutput.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cityInput
@@ -300,7 +300,7 @@
             this.humidityOutput.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
             this.humidityOutput.Location = new System.Drawing.Point(131, 281);
             this.humidityOutput.Name = "humidityOutput";
-            this.humidityOutput.Size = new System.Drawing.Size(70, 18);
+            this.humidityOutput.Size = new System.Drawing.Size(87, 18);
             this.humidityOutput.TabIndex = 58;
             this.humidityOutput.Text = "humidity";
             // 
