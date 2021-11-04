@@ -50,12 +50,12 @@ namespace XMLWeather
                 day.precipitation = reader.GetAttribute("name");
 
                 reader.ReadToFollowing("temperature");
-                day.tempLow = reader.GetAttribute("min");
-                day.tempHigh = reader.GetAttribute("max");
+                day.tempLow = Math.Round(Convert.ToDouble(reader.GetAttribute("min"))).ToString();
+                day.tempHigh = Math.Round(Convert.ToDouble(reader.GetAttribute("max"))).ToString();
                 day.unit = reader.GetAttribute("unit");
 
                 reader.ReadToFollowing("clouds");
-                day.condition = reader.GetAttribute("name");
+                day.condition = reader.GetAttribute("value");
 
                 //TODO: if day object not null add to the days list
                 days.Add(day);

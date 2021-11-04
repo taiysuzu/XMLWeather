@@ -33,7 +33,7 @@
             this.minLabel = new System.Windows.Forms.Label();
             this.currentOutput = new System.Windows.Forms.Label();
             this.tempLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.currentLabel = new System.Windows.Forms.Label();
             this.forecastLabel = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.designLabel1 = new System.Windows.Forms.Label();
@@ -99,17 +99,17 @@
             this.tempLabel.TabIndex = 26;
             this.tempLabel.Text = "Current Temperature";
             // 
-            // label3
+            // currentLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Futurama Bold Font", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
-            this.label3.Location = new System.Drawing.Point(14, 350);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 33);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Today";
+            this.currentLabel.AutoSize = true;
+            this.currentLabel.BackColor = System.Drawing.Color.Transparent;
+            this.currentLabel.Font = new System.Drawing.Font("Futurama Bold Font", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.currentLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(169)))), ((int)(((byte)(153)))));
+            this.currentLabel.Location = new System.Drawing.Point(14, 350);
+            this.currentLabel.Name = "currentLabel";
+            this.currentLabel.Size = new System.Drawing.Size(111, 33);
+            this.currentLabel.TabIndex = 40;
+            this.currentLabel.Text = "Today";
             // 
             // forecastLabel
             // 
@@ -119,9 +119,9 @@
             this.forecastLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(137)))), ((int)(((byte)(191)))));
             this.forecastLabel.Location = new System.Drawing.Point(130, 350);
             this.forecastLabel.Name = "forecastLabel";
-            this.forecastLabel.Size = new System.Drawing.Size(104, 33);
+            this.forecastLabel.Size = new System.Drawing.Size(103, 33);
             this.forecastLabel.TabIndex = 41;
-            this.forecastLabel.Text = "7 Day";
+            this.forecastLabel.Text = "5 Day";
             this.forecastLabel.Click += new System.EventHandler(this.forecastLabel_Click);
             // 
             // label5
@@ -349,7 +349,7 @@
             this.Controls.Add(this.maxLabel);
             this.Controls.Add(this.tempLabel);
             this.Controls.Add(this.forecastLabel);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.currentLabel);
             this.Controls.Add(this.cityOutput);
             this.Controls.Add(this.minLabel);
             this.Controls.Add(this.currentOutput);
@@ -371,7 +371,7 @@
         private System.Windows.Forms.Label minLabel;
         private System.Windows.Forms.Label currentOutput;
         private System.Windows.Forms.Label tempLabel;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label currentLabel;
         private System.Windows.Forms.Label forecastLabel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label designLabel1;
