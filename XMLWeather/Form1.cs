@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*Taiyo Suzuki
+ * November 8, 2021
+ * Basic weather app
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
