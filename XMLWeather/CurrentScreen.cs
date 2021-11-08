@@ -106,6 +106,7 @@ namespace XMLWeather
 
             try
             {   //if city is not found (error thrown), catch and return error message
+                Form1.ExtractForecast();
                 Form1.ExtractCurrent();
                 errorLabel.Visible = false;
             }

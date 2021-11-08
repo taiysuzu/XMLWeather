@@ -25,6 +25,8 @@ namespace XMLWeather
         {
             InitializeComponent();
             fillLists();
+            Form1.ExtractForecast();
+            Form1.ExtractCurrent();
             displayForecast();
         }
 
